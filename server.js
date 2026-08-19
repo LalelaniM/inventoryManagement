@@ -205,7 +205,7 @@ async function getWarehouseInventoryTotal(
 
     let pageNo = 1;
 
-    const recordsOnPage = 1000;
+    const recordsOnPage = 200;
 
     let totalQuantity = 0;
     let totalRecords = 0;

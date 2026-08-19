@@ -237,11 +237,7 @@ async function getWarehouseInventoryTotal(
         const records =
             data.records || [];
 
-            console.log(
-    "SAMPLE PRODUCT:",
-    JSON.stringify(records[0], null, 2)
-    );
-
+      
         if (records.length === 0) {
             break;
         }

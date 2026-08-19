@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Inventory Management</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+<body>
+
+<main class="container">
+
+    <header class="header">
+
+        <h1>
+            Inventory Management
+        </h1>
+
+        <p>
+            Daily inventory monitoring
+        </p>
+
+    </header>
+
+
+    <!-- STATUS -->
+
+    <section
+        id="statusPanel"
+        class="status-panel hidden"
+    >
+
+        <div>
+
+            <span class="status-label">
+                Today's Opening
+            </span>
+
+            <strong
+                id="openingTotal"
+            >
+                0
+            </strong>
+
+            <span
+                id="openingTime"
+                class="timestamp"
+            >
+            </span>
+
+        </div>
+
+    </section>
+
+
+    <!-- LOCATION CARDS -->
+
+    <section class="cards">
+
+        <!-- RETAIL -->
+
+        <div class="card">
+
+            <h2>
+                Cole Haan Retail
+            </h2>
+
+            <div class="figure-row">
+
+                <div>
+                    <span>
+                        Opening
+                    </span>
+
+                    <strong
+                        id="retailOpening"
+                    >
+                        —
+                    </strong>
+                </div>
+
+                <div>
+                    <span>
+                        Current
+                    </span>
+
+                    <strong
+                        id="retailCurrent"
+                    >
+                        —
+                    </strong>
+                </div>
+
+                <div>
+                    <span>
+                        Change
+                    </span>
+
+                    <strong
+                        id="retailChange"
+                    >
+                        —
+                    </strong>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- WAREHOUSE -->
+
+        <div class="card">
+
+            <h2>
+                Warehouse
+            </h2>
+
+            <div class="figure-row">
+
+                <div>
+                    <span>
+                        Opening
+                    </span>
+
+                    <strong
+                        id="warehouseOpening"
+                    >
+                        —
+                    </strong>
+                </div>
+
+                <div>
+                    <span>
+                        Current
+                    </span>
+
+                    <strong
+                        id="warehouseCurrent"
+                    >
+                        —
+                    </strong>
+                </div>
+
+                <div>
+                    <span>
+                        Change
+                    </span>
+
+                    <strong
+                        id="warehouseChange"
+                    >
+                        —
+                    </strong>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- STOREROOM -->
+
+        <div class="card">
+
+            <h2>
+                Sandton Storeroom
+            </h2>
+
+            <div class="figure-row">
+
+                <div>
+                    <span>
+                        Opening
+                    </span>
+
+                    <strong
+                        id="storeroomOpening"
+                    >
+                        —
+                    </strong>
+                </div>
+
+                <div>
+                    <span>
+                        Current
+                    </span>
+
+                    <strong
+                        id="storeroomCurrent"
+                    >
+                        —
+                    </strong>
+                </div>
+
+                <div>
+                    <span>
+                        Change
+                    </span>
+
+                    <strong
+                        id="storeroomChange"
+                    >
+                        —
+                    </strong>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- TOTAL -->
+
+    <section
+        id="totalPanel"
+        class="total-panel hidden"
+    >
+
+        <div>
+
+            <span>
+                Current Total
+            </span>
+
+            <strong
+                id="currentTotal"
+            >
+                0
+            </strong>
+
+        </div>
+
+        <div>
+
+            <span>
+                Net Change
+            </span>
+
+            <strong
+                id="totalChange"
+            >
+                0
+            </strong>
+
+        </div>
+
+    </section>
+
+
+    <!-- BUTTONS -->
+
+    <section class="controls">
+
+        <button
+            id="openingBtn"
+            class="primary"
+        >
+            Generate Opening Figures
+        </button>
+
+        <button
+            id="currentBtn"
+            class="secondary"
+            disabled
+        >
+            Check Current Figures
+        </button>
+
+        <button
+            id="closingBtn"
+            class="danger"
+            disabled
+        >
+            Close Day
+        </button>
+
+    </section>
+
+
+    <!-- LAST CHECKED -->
+
+    <div
+        id="lastChecked"
+        class="last-checked"
+    >
+    </div>
+
+
+    <!-- ERROR -->
+
+    <div
+        id="errorMessage"
+        class="error hidden"
+    >
+    </div>
+
+
+    <!-- LOADING -->
+
+    <div
+        id="loading"
+        class="loading hidden"
+    >
+        Loading inventory...
+    </div>
+
+
+</main>
+
+<script src="app.js"></script>
+
+</body>
+
+</html>
